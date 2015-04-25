@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 2.6)
+
+if (MSVC)
+	set (CMAKE_CXX_FLAGS "/Wall /WX")
+else (MSVC)
+	set (CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wfatal-errors")
+endif (MSVC)
+
+add_library("render"
+	"image.cpp"
+	"matrix.cpp"
+	"vector.cpp")
+
+add_subdirectory("debug")
+
+enable_testing()
+
+add_executable("vector-test" "vector-test.cpp")
+
+target_link_libraries("vector-test" "render" "render-debug")
+
+add_test(NAME "vector-test" COMMAND "$<TARGET_FILE:vector-test>")
+
