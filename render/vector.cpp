@@ -8,7 +8,7 @@ vector::vector(int32_t x, int32_t y): x(x), y(y) {
 
 }
 
-void vector::draw(render::matrix& matrix){
+void vector::draw(render::target& target) const {
 
 	double rational_slope = static_cast<double>(this->y) / static_cast<double>(this->x);
 
@@ -22,12 +22,12 @@ void vector::draw(render::matrix& matrix){
 
 		uint8_t intensity = static_cast<uint8_t>(std::floor(255.0 * (1 - rational_y_error)));
 
-		matrix.SetValue(x_pos, y_pos, intensity);
+		target.SetValue(x_pos, y_pos, intensity);
 
 		uint8_t next_intensity = static_cast<uint8_t>(std::floor(255.0 * rational_y_error));
 
 		if (next_intensity > 0x00){
-			matrix.SetValue(x_pos, y_pos + 1, next_intensity);
+			target.SetValue(x_pos, y_pos + 1, next_intensity);
 		}
 	}
 }

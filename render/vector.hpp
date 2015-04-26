@@ -1,7 +1,7 @@
 #ifndef RENDER_VECTOR_HPP
 #define RENDER_VECTOR_HPP
 
-#include "render/matrix.hpp"
+#include "render/target.hpp"
 
 #include <stdint.h>
 
@@ -19,7 +19,7 @@ class vector {
 
 	vector(int32_t x, int32_t y);
 
-	void draw(render::matrix& matrix);
+	void draw(render::target& target) const;
 
 }; /* class vector */
 

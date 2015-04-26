@@ -8,7 +8,7 @@ endif (MSVC)
 
 add_library("render"
 	"image.cpp"
-	"matrix.cpp"
+	"target.cpp"
 	"vector.cpp")
 
 add_subdirectory("debug")

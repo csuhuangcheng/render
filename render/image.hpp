@@ -1,11 +1,11 @@
 #ifndef RENDER_IMAGE_HPP
 #define RENDER_IMAGE_HPP
 
-#include "render/matrix.hpp"
+#include "render/target.hpp"
 
 namespace render {
 
-class image: public render::matrix {
+class image: public render::target {
 
 	public:
 
