@@ -11,7 +11,7 @@ int main(void){
 
 	image.SetDimensions(8, 8);
 
-	render::vector(4, 7).draw(image);
+	render::vector(4, 7).Draw(image);
 
 	image.FPrintf(std::cout);
 

@@ -19,7 +19,7 @@ class vector {
 
 	vector(int32_t x, int32_t y);
 
-	void draw(render::target& target) const;
+	void Draw(render::target& target) const;
 
 }; /* class vector */
 

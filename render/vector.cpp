@@ -8,7 +8,7 @@ vector::vector(int32_t x, int32_t y): x(x), y(y) {
 
 }
 
-void vector::draw(render::target& target) const {
+void vector::Draw(render::target& target) const {
 
 	double rational_slope = static_cast<double>(this->y) / static_cast<double>(this->x);
 
