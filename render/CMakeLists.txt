@@ -8,6 +8,8 @@ endif (MSVC)
 
 add_library("render"
 	"image.cpp"
+	"primitive.cpp"
+	"line.cpp"
 	"target.cpp"
 	"vector.cpp")
 
