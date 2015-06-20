@@ -3,13 +3,15 @@ cmake_minimum_required(VERSION 2.6)
 if (MSVC)
 	set (CMAKE_CXX_FLAGS "/Wall /WX")
 else (MSVC)
-	set (CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wfatal-errors")
+	set (CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wfatal-errors -std=c++11")
 endif (MSVC)
 
 add_library("render"
+	"coordinate.cpp"
 	"image.cpp"
 	"primitive.cpp"
 	"line.cpp"
+	"pixel.cpp"
 	"target.cpp"
 	"vector.cpp")
 
