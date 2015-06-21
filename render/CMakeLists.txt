@@ -11,7 +11,7 @@ add_library("render"
 	"image.cpp"
 	"primitive.cpp"
 	"line.cpp"
-	"pixel.cpp"
+	"point.cpp"
 	"target.cpp"
 	"vector.cpp")
 
