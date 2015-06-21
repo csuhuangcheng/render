@@ -19,4 +19,21 @@ class target {
 
 } /* namespace render */
 
+#include "render/color.hpp"
+#include "render/coordinate.hpp"
+
+namespace Render {
+
+	class Target {
+
+		public:
+
+		virtual ~Target(void);
+
+		void SetColor(const Coordinate& coordinate, const Color& color);
+
+	}; /* class Target */
+
+} /* namespace Render */
+
 #endif /* RENDER_TARGET_H */
