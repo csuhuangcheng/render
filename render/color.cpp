@@ -36,5 +36,9 @@ namespace Render {
 		this->blue = blue;
 	}
 
+	std::ostream& operator<<(std::ostream& output_stream, const Color& color){
+		output_stream << "#" << std::setfill('0') << std::setw(2) << std::hex << color.Red() << color.Green() << color.Blue();
+	}
+
 } /* namespace Render */
 

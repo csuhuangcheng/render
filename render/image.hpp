@@ -3,36 +3,39 @@
 
 #include "render/target.hpp"
 
-namespace render {
+#include <vector>
 
-class image: public render::target {
+namespace Render {
 
-	public:
+	class Image: public Render::Target {
 
-	image(void);
+		public:
 
-	virtual ~image(void);
+		Image(uint32_t width, uint32_t height);
 
-	virtual uint8_t GetValue(uint32_t x, uint32_t y) const;
+		virtual ~Image(void);
 
-	virtual uint32_t RowCount(void) const;
+		virtual uint32_t Width(void) const noexcept;
 
-	virtual uint32_t RowWidth(void) const;
+		virtual uint32_t Height(void) const noexcept;
 
-	virtual void SetDimensions(uint32_t row_width, uint32_t row_count);
+		virtual Color GetColor(const Coordinate& coordinate) const;
 
-	virtual void SetValue(uint32_t x, uint32_t y, uint8_t value);
+		virtual void SetColor(const Coordinate& coordinate, const Color& color);
 
-	private:
+		protected:
 
-	uint8_t ** row_array;
+		uint32_t width;
 
-	uint32_t row_count;
+		uint32_t height;
 
-	uint32_t row_width;
-};
+		std::vector<Color> pixels;
 
-} /* namespace render */
+	}; /* class Image */
+
+	std::ostream& operator<<(std::ostream& output_stream, const Image& image);
+
+} /* namespace Render */
 
 #endif /* RENDER_IMAGE_HPP */
 

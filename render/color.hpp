@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <string>
+#include <iostream>
 
 namespace Render {
 
@@ -35,6 +36,8 @@ namespace Render {
 		uint8_t blue;
 
 	}; /* class Color */
+
+	std::ostream& operator<<(std::ostream& output_stream, const Color& color);
 
 } /* namespace Render */
 

@@ -15,13 +15,11 @@ add_library("render"
 	"target.cpp"
 	"vector.cpp")
 
-add_subdirectory("debug")
-
 enable_testing()
 
 add_executable("vector-test" "vector-test.cpp")
 
-target_link_libraries("vector-test" "render" "render-debug")
+target_link_libraries("vector-test" "render")
 
 add_test(NAME "vector-test" COMMAND "$<TARGET_FILE:vector-test>")
 
