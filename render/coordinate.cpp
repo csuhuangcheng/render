@@ -10,6 +10,14 @@ namespace Render {
 
 	}
 
+	void Coordinate::AddX(int32_t add_x){
+		x += add_x;
+	}
+
+	void Coordinate::AddY(int32_t add_y){
+		y += add_y;
+	}
+
 	void Coordinate::SetX(int32_t x) noexcept {
 		this->x = x;
 	}

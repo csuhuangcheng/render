@@ -13,6 +13,10 @@ namespace Render {
 
 		~Coordinate(void);
 
+		void AddX(int32_t x);
+
+		void AddY(int32_t y);
+
 		void SetX(int32_t x) noexcept;
 
 		void SetY(int32_t y) noexcept;
