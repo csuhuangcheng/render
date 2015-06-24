@@ -13,6 +13,8 @@ namespace Render {
 
 		Image(uint32_t width, uint32_t height);
 
+		Image(uint32_t width, uint32_t height, std::vector<Color> pixels);
+
 		virtual ~Image(void);
 
 		virtual uint32_t Width(void) const noexcept;
@@ -34,6 +36,10 @@ namespace Render {
 	}; /* class Image */
 
 	std::ostream& operator<<(std::ostream& output_stream, const Image& image);
+
+	bool operator==(const Image& image_1, const Image& image_2);
+
+	bool operator!=(const Image& image_1, const Image& image_2);
 
 } /* namespace Render */
 

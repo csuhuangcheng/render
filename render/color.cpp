@@ -1,5 +1,7 @@
 #include "render/color.hpp"
 
+#include <iomanip>
+
 namespace Render {
 
 	Color::Color(uint8_t red, uint8_t green, uint8_t blue): red(red), green(green), blue(blue) {
@@ -37,7 +39,7 @@ namespace Render {
 	}
 
 	std::ostream& operator<<(std::ostream& output_stream, const Color& color){
-		output_stream << "#" << std::setfill('0') << std::setw(2) << std::hex << color.Red() << color.Green() << color.Blue();
+		return output_stream << "#" << std::setfill('0') << std::setw(2) << std::hex << color.Red() << color.Green() << color.Blue();
 	}
 
 } /* namespace Render */

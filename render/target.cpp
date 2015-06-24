@@ -1,10 +1,9 @@
 #include "render/target.hpp"
 
-namespace render {
+namespace Render {
 
-target::~target(void){
+	Target::~Target(void){
 
+	}
 }
-
-} /* namespace render */
 
