@@ -4,7 +4,9 @@
 #include <stdexcept>
 
 namespace {
+
 	void RunTest(const Render::Point& point, const Render::Image& expected_image);
+
 } /* namespace */
 
 int main(void){
@@ -15,7 +17,9 @@ int main(void){
 }
 
 namespace {
+
 	void RunTest(const Render::Point& point, const Render::Image& expected_image){
+
 		Render::Image actual_image(expected_image.Width(), expected_image.Height());
 
 		point.Draw(actual_image);
