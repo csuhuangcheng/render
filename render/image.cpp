@@ -22,11 +22,11 @@ namespace Render {
 		return height;
 	}
 
-	Color Image::GetColor(const Coordinate& coordinate) const {
+	Color Image::Pixel(const Coordinate& coordinate) const {
 		return this->pixels[coordinate.X() + (coordinate.Y() + width)];
 	}
 
-	void Image::SetColor(const Coordinate& coordinate, const Color& color){
+	void Image::SetPixel(const Coordinate& coordinate, const Color& color){
 		this->pixels[coordinate.X() + (coordinate.Y() * width)] = color;
 	}
 

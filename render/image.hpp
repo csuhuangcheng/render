@@ -21,9 +21,9 @@ namespace Render {
 
 		virtual uint32_t Height(void) const noexcept;
 
-		virtual Color GetColor(const Coordinate& coordinate) const;
+		virtual Color Pixel(const Coordinate& coordinate) const;
 
-		virtual void SetColor(const Coordinate& coordinate, const Color& color);
+		virtual void SetPixel(const Coordinate& coordinate, const Color& color);
 
 		protected:
 
