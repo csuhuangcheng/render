@@ -11,25 +11,25 @@ namespace Render {
 
 		public:
 
-		Image(uint32_t width, uint32_t height);
+		Image(int32_t width, int32_t height);
 
-		Image(uint32_t width, uint32_t height, std::vector<Color> pixels);
+		Image(int32_t width, int32_t height, std::vector<Color> pixels);
 
 		virtual ~Image(void);
 
-		virtual uint32_t Width(void) const noexcept;
+		virtual int32_t Width(void) const noexcept;
 
-		virtual uint32_t Height(void) const noexcept;
+		virtual int32_t Height(void) const noexcept;
 
-		virtual Color Pixel(const Coordinate& coordinate) const;
+		Color& operator[](const Coordinate& c);
 
-		virtual void SetPixel(const Coordinate& coordinate, const Color& color);
+		const Color& operator[](const Coordinate& c) const;
 
 		protected:
 
-		uint32_t width;
+		int32_t width;
 
-		uint32_t height;
+		int32_t height;
 
 		std::vector<Color> pixels;
 

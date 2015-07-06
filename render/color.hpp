@@ -11,7 +11,11 @@ namespace Render {
 
 		public:
 
-		Color(uint8_t red = 0, uint8_t green = 0, uint8_t blue = 0);
+		Color(void);
+
+		Color(const Color& color);
+
+		Color(uint8_t red, uint8_t green, uint8_t blue);
 
 		void Parse(const std::string& description);
 
@@ -36,6 +40,20 @@ namespace Render {
 		uint8_t blue;
 
 	}; /* class Color */
+
+	const Color Red(0xFF, 0x00, 0x00);
+
+	const Color Green(0x00, 0xFF, 0x00);
+
+	const Color Blue(0x00, 0x00, 0xFF);
+
+	const Color Black(0x00, 0x00, 0x00);
+
+	const Color White(0xFF, 0xFF, 0xFF);
+
+	bool operator==(const Color& color_1, const Color& color_2);
+
+	bool operator!=(const Color& color_1, const Color& color_2);
 
 	std::ostream& operator<<(std::ostream& output_stream, const Color& color);
 

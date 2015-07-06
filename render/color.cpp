@@ -4,6 +4,14 @@
 
 namespace Render {
 
+	Color::Color(void): red(0), green(0), blue(0) {
+
+	}
+
+	Color::Color(const Color& color): red(color.Red()), green(color.Green()), blue(color.Blue()){
+
+	}
+
 	Color::Color(uint8_t red, uint8_t green, uint8_t blue): red(red), green(green), blue(blue) {
 
 	}
@@ -36,6 +44,20 @@ namespace Render {
 
 	void Color::SetBlue(uint8_t blue){
 		this->blue = blue;
+	}
+
+	bool operator==(const Color& color_1, const Color& color_2){
+		if (color_1.Red() != color_2.Red()
+		 || color_1.Green() != color_2.Green()
+		 || color_1.Blue()!= color_2.Blue()){
+			return false;
+		}
+
+		return true;
+	}
+
+	bool operator!=(const Color& color_1, const Color& color_2){
+		return !(color_1 == color_2);
 	}
 
 	std::ostream& operator<<(std::ostream& output_stream, const Color& color){

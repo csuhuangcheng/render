@@ -9,9 +9,7 @@ namespace Render {
 
 		public:
 
-		Coordinate(void);
-
-		~Coordinate(void);
+		Coordinate(int32_t x = 0, int32_t y = 0);
 
 		void AddX(int32_t x);
 

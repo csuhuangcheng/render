@@ -2,11 +2,7 @@
 
 namespace Render {
 
-	Coordinate::Coordinate(void): x(0), y(0) {
-
-	}
-
-	Coordinate::~Coordinate(void){
+	Coordinate::Coordinate(int32_t x, int32_t y): x(x), y(y) {
 
 	}
 
